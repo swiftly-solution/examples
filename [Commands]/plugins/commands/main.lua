@@ -87,12 +87,14 @@ end)
 --[[
     Replying to a command
 
-    1. Replying to a command via print (Console Send Message) or SendMsg (Player Send Message).
+    2. Replying to a command via print (Console Send Message) or SendMsg (Player Send Message).
 
-    ReplyToCommand Arguments:
-        playerid - number - PLayer ID (-1 = Console, 0-63 = PlayerID's)
-        prefix - string - The prefix which will appear in the chat (If the playerid is the console, the prefix will not appear)
-        text - string - The text to send to the player or the console.
+    print Arguments:
+        text - string - The text to send to the console.
+
+    SendMsg Arguments:
+        messageType - MessageType - How the message should be sent to the player.
+        text - string - The text to send to the player.
 ]]
 commands:Register("replycmd", function (playerid, args, argc, silent, prefix)
     local player = GetPlayer(playerid)
