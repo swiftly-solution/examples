@@ -10,7 +10,7 @@ function GetPluginVersion()
 end
 
 function GetPluginName()
-    return "Commands Examples"
+    return "[Lua] Base Plugin"
 end
 
 function GetPluginWebsite()

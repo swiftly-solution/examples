@@ -120,7 +120,7 @@ function GetPluginVersion()
 end
 
 function GetPluginName()
-    return "Commands Examples"
+    return "[Lua] Commands Examples"
 end
 
 function GetPluginWebsite()
