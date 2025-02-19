@@ -111,18 +111,18 @@ commands.Register("replycmd", (playerId, args, argc, silent, prefix) => {
 /*
     Core Functions
 */
-function getPluginAuthor() {
+function GetPluginAuthor() {
     return "Swiftly Solution";
 }
 
-function getPluginVersion() {
+function GetPluginVersion() {
     return "1.0.0";
 }
 
-function getPluginName() {
+function GetPluginName() {
     return "[Javascript] Commands Examples";
 }
 
-function getPluginWebsite() {
+function GetPluginWebsite() {
     return "https://github.com/swiftly-solution/examples";
 }
