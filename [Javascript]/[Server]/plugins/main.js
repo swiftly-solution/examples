@@ -48,7 +48,7 @@ commands.Register("command", (playerId, args, argc, silent, prefix) => {
 */
 
 commands.Register("time", (playerId, args, argc, silent, prefix) => {
-    console.log(`Current time: {time}`, server.GetCurrentTime());
+    console.log(`Current time: ${server.GetCurrentTime()}`);
 });
 
 /**
@@ -62,7 +62,7 @@ commands.Register("time", (playerId, args, argc, silent, prefix) => {
 */
 
 commands.Register("ip", (playerId, args, argc, silent, prefix) => {
-    console.log(`Server IP: {ip}`, server.GetIP());
+    console.log(`Server IP: ${server.GetIP()}`);
 });
 
 /**
@@ -76,7 +76,7 @@ commands.Register("ip", (playerId, args, argc, silent, prefix) => {
 */
 
 commands.Register("currentmap", (playerId, args, argc, silent, prefix) => {
-    console.log(`Current map is: {currentmap}`, server.GetMap());
+    console.log(`Current map is: ${server.GetMap()}`);
 });
 
 /**
@@ -90,7 +90,7 @@ commands.Register("currentmap", (playerId, args, argc, silent, prefix) => {
 */
 
 commands.Register("maxplayers", (playerId, args, argc, silent, prefix) => {
-    console.log(`Max players: {players}`, server.GetMaxPlayers());
+    console.log(`Max players: ${server.GetMaxPlayers()}`);
 });
 
 /**
@@ -104,7 +104,7 @@ commands.Register("maxplayers", (playerId, args, argc, silent, prefix) => {
 */
 
 commands.Register("tickcount", (playerId, args, argc, silent, prefix) => {
-    console.log(`Tick count: {tick}`, server.GetTickCount());
+    console.log(`Tick count: ${server.GetTickCount()}`);
 });
 
 /**
