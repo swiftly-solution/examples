@@ -85,3 +85,22 @@ commands.Register("startstop", (playerid, args, argc, silent, prefix) => {
         StopTimer(timer)
     })
 });
+
+/*
+    Core Functions
+*/
+function GetPluginAuthor() {
+    return "Swiftly Solution";
+}
+
+function GetPluginVersion() {
+    return "1.0.0";
+}
+
+function GetPluginName() {
+    return "[Javascript] Timers Examples";
+}
+
+function GetPluginWebsite() {
+    return "https://github.com/swiftly-solution/examples";
+}

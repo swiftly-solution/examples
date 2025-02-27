@@ -86,3 +86,22 @@ commands:Register("startstop", function (playerid, args, argsCount, silent, pref
     end)
     -- Start and stop timer after 5 seconds.
 end)
+
+--[[
+    Core Functions
+]]
+function GetPluginAuthor()
+    return "Swiftly Solution"
+end
+
+function GetPluginVersion()
+    return "1.0.0"
+end
+
+function GetPluginName()
+    return "[Lua] Timers Examples"
+end
+
+function GetPluginWebsite()
+    return "https://github.com/swiftly-solution/examples"
+end
