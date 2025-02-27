@@ -39,7 +39,7 @@ http.Listen("0.0.0.0", 1337, function(req, res){
                 httpresponse.Send(response_code) - Send the response.
                 httpresponse.IsCompleted() - Check if the response is completed.
     */
-    print(req.path)
+    console.log(req.path)
     
     res.WriteBody(req.path)
     res.SetHeader("Content-Type", "text/plain")
