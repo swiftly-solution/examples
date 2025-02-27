@@ -9,7 +9,7 @@
 */
 
 commands.Register("maxplayers", (playerId, args, argc, silent, prefix) => {
-    console.log(`Maximum players: {players}`, playermanager.GetPlayerCap());
+    console.log(`Maximum players: ${playermanager.GetPlayerCap()}`);
 });
 
 /**
@@ -23,7 +23,7 @@ commands.Register("maxplayers", (playerId, args, argc, silent, prefix) => {
 */
 
 commands.Register("players", (playerId, args, argc, silent, prefix) => {
-    console.log(`There are: {players} online!`, playermanager.GetPlayerCount());
+    console.log(`There are: ${playermanager.GetPlayerCount()} online!`);
 });
 
 /**
