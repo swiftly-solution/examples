@@ -107,3 +107,22 @@ commands.Register("tempmenu", (playerId, args, argc, silent, prefix) => {
 commands.Register("removemenu", (playerId, args, argc, silent, prefix) => {
     menus.Unregister("admin_menu")
 });
+
+/*
+    Core Functions
+*/
+function GetPluginAuthor() {
+    return "Swiftly Solution";
+}
+
+function GetPluginVersion() {
+    return "1.0.0";
+}
+
+function GetPluginName() {
+    return "[Javascript] Menus Examples";
+}
+
+function GetPluginWebsite() {
+    return "https://github.com/swiftly-solution/examples";
+}

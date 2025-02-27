@@ -99,3 +99,22 @@ end)
 commands:Register("removemenu", function (playerid, args, argsCount, silent, prefix)
     menus:Unregister("admin_menu")
 end)
+
+--[[
+    Core Functions
+]]
+function GetPluginAuthor()
+    return "Swiftly Solution"
+end
+
+function GetPluginVersion()
+    return "1.0.0"
+end
+
+function GetPluginName()
+    return "[Lua] Menus Examples"
+end
+
+function GetPluginWebsite()
+    return "https://github.com/swiftly-solution/examples"
+end
