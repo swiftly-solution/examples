@@ -1,7 +1,7 @@
-  <h3 align="center">[Examples] HTTP</h3>
+  <h3 align="center">[Examples] Generic</h3>
 
   <p align="center">
-    A plugin which is showing the HTTP API in action.
+    A plugin which is showing the Generic API in action.
     <br/>
   </p>
 </p>
