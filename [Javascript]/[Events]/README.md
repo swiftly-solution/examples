@@ -1,4 +1,4 @@
-  <h3 align="center">[Examples] Commands</h3>
+  <h3 align="center">[Examples] Events</h3>
 
   <p align="center">
     A plugin which is showing the Events API in action.
