@@ -2,7 +2,7 @@
     AddEventHandler
     Adds a new event handler for the specified event
 
-    This function creates a hook menu for specified event (game, core or custom events).
+    This function creates a hook for specified event (game, core or custom events).
 
     --- @param eventName string
     --- @param callback fun(event:Event,...):EventResult|nil
