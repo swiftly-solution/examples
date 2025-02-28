@@ -1,4 +1,15 @@
 --[[
+    Types of Game Events
+    There are three types of game events you can work with in Swiftly:
+
+        • Core Events: These are custom events implemented by the Swiftly development team, providing enhanced functionality specific to the platform.
+        • Default Game Events: These are native events provided by Counter-Strike 2 (CS2).
+        • Custom  Events: These are events you can create yourself to trigger specific actions in your plugin.
+
+    The Core Events were implemented by us, and the rest of the Game Events are just default events provided by CS2.
+]]
+
+--[[
     AddEventHandler
     Adds a new event handler for the specified event
 
@@ -11,7 +22,18 @@
     
     Arguments:
         eventName - string - The event name.
-        callback - function - The function to call when the event is triggered.  
+        callback - function - The function to call when the event is triggered.
+        
+    For Core Events/ Custom Events, the callback may include additional parameters like playerid, text, etc. For Default Game Events, the callback receives a single parameter: event.
+    
+    Cancelling events
+        For every game event, we return an EventResult. This determines how the event should proceed within the game. Let’s break down the possible EventResult values:
+
+        EventResult = {
+            Continue: 0, // Continues to process the event until the end.
+            Stop: 1,     // Stops processing the event and stops calling the code following by it.
+            Handled: 2   // Stops processing the event but calls the code followed by it.
+        }    
 ]]
 
 --[[ CoreEvent ]]
@@ -19,12 +41,32 @@ AddEventHandler("OnPluginStart", function (event)
     print("Plugin Started")
 end)
 
---[[ GameEvent ]]
-AddEventHandler("OnPlayerConnectFull", function (event)
-    local player = GetPlayer(event:GetInt("userid"))
-    if not player then return end
-    print("Player " .. tostring(player:GetSteamID()) .. " connected.")
+--[[ Cancelling events ]]
+AddEventHandler("OnPlayerDeath", function (event)
+    return EventResult.Stop -- Prevent the event from propagating further.
+end)
+
+--[[
+    GameEvent
+    Each default game event contains specific keys that you can read and modify to suit your needs. Let’s walk through an example:
+]]
+
+AddEventHandler("OnPlayerDeath", function(event)
+    local playerid = event:GetInt("userid") -- Retrieve the ID of the player who died.
+    local attackerid = event:GetInt("attacker") -- Retrieve the ID of the player who attacked.
+    local headshot = event:GetBool("headshot") -- Check if the kill was a headshot.
+    local noscope = event:GetBool("noscope") -- Check if the kill was performed without a scope.
     return EventResult.Continue
+end)
+--[[
+    Changing event keys.
+    Now that we know how to read keys from game events, let’s explore how to modify them. To do this, use the Set functions along with the appropriate data type, such as SetInt or SetBool
+]]
+
+AddEventHandler("OnPlayerDeath", function(event)
+    event:SetBool("headshot", true) -- Force the event to register as a headshot.
+    event:SetBool("wipe", 1) -- Force the event to register as a wipe.
+    event:SetBool("noscope", true) -- Force the event to register as a noscope.
 end)
 
 --[[
