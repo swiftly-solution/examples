@@ -25,7 +25,7 @@ commands.Register("testexport", (playerid, args, argc, silent, prefix) => {
     This function registers an export for this plugin.
     
     * @param {string} exportName
-    * @param {(...args: any[]) => void} callback
+    * @param {(...args: any[]) => any} callback
     * @return {null|undefined}
     export(exportName, callback)
 */
