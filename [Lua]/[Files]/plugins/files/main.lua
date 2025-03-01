@@ -208,3 +208,22 @@ commands:Register("write", function(playerid, args, argsCount, silent, prefix)
     files:Write("addons/swiftly/important/important.txt", "Important data", true)
     print("File written")
 end)
+
+--[[
+    Core Functions
+]]
+function GetPluginAuthor()
+    return "Swiftly Solution"
+end
+
+function GetPluginVersion()
+    return "1.0.0"
+end
+
+function GetPluginName()
+    return "[Lua] Files Examples"
+end
+
+function GetPluginWebsite()
+    return "https://github.com/swiftly-solution/examples"
+end

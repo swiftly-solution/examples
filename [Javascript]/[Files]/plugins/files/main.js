@@ -208,3 +208,22 @@ commands.register("write", (playerId, args, argc, silent, prefix) => {
     files.Write("addons/swiftly/important/important.txt", "Important data", true);
     console.log("File written");
 });
+
+/*
+    Core Functions
+*/
+function GetPluginAuthor() {
+    return "Swiftly Solution";
+}
+
+function GetPluginVersion() {
+    return "1.0.0";
+}
+
+function GetPluginName() {
+    return "[Javascript] Files Examples";
+}
+
+function GetPluginWebsite() {
+    return "https://github.com/swiftly-solution/examples";
+}
